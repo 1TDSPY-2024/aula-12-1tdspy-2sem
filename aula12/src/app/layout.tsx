@@ -1,6 +1,7 @@
 import Cabecalho from "@/components/Cabecalho/Cabecalho";
 import Rodape from "@/components/Rodape/Rodape";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Exemplo de Boyler-Plate",
@@ -18,12 +19,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="pt-br">
       <body>
         <Cabecalho />
         {children}
         <Rodape />
+    
+
       </body>
     </html>
   );
