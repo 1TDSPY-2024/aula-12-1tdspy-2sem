@@ -1,6 +1,9 @@
+"use client";
 import Cabecalho from "@/components/Cabecalho/Cabecalho";
 import Rodape from "@/components/Rodape/Rodape";
 import type { Metadata } from "next";
+
+
 
 export const metadata: Metadata = {
   title: "Exemplo de Boyler-Plate",
@@ -13,6 +16,8 @@ export const viewport = {
   colorScheme: "light"
 }
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <Cabecalho />
+      <Cabecalho />
         {children}
         <Rodape />
       </body>
