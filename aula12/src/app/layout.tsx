@@ -1,7 +1,7 @@
 import Cabecalho from "@/components/Cabecalho/Cabecalho";
 import Rodape from "@/components/Rodape/Rodape";
 import type { Metadata } from "next";
-import Image from "next/image";
+
 
 export const metadata: Metadata = {
   title: "Exemplo de Boyler-Plate",
@@ -14,22 +14,22 @@ export const viewport = {
   colorScheme: "light"
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
 
+  // const rotas = useRouter();
+
+  // //Criando uma lista de rotas;
+  // const rotasSemFooterHead = ['/not-found','/produto'];
+  // console.log("ROTA ATUAL : " + rotas.pathname);
+  // const rotaAtual = rotasSemFooterHead.includes(rotas.pathname);
 
   return (
     <html lang="pt-br">
       <body>
         <Cabecalho />
-        {children}
+          {children}
         <Rodape />
-    
-
-      </body>
+       </body>
     </html>
   );
 }
