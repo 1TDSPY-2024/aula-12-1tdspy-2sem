@@ -1,6 +1,7 @@
 import Cabecalho from "@/components/Cabecalho/Cabecalho";
 import Rodape from "@/components/Rodape/Rodape";
 import type { Metadata } from "next";
+import { useRouter } from "next/router";
 
 export const metadata: Metadata = {
   title: "Exemplo de Boyler-Plate",
@@ -18,10 +19,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const rotas = useRouter();
+
+  //Criando uma lista de rotas
+  const rotasSemFooterHead = ['/not-found', '/produto'];
+
+  const rotaAtual = rotasSemFooterHead.includes(rotas.pathname);
+
   return (
     <html lang="pt-br">
       <body>
-        <Cabecalho />
+        {!rotaAtual && <Cabecalho />}
         {children}
         <Rodape />
       </body>

@@ -38,9 +38,9 @@ export default function Produtos() {
 
                 <tfoot>
                     <tr>
-                        <th>
-
-                        </th>
+                        <td colSpan={5}>
+                            Quantidade de resgistros: {produtos.length}
+                        </td>
                     </tr>
                 </tfoot>
             </table>
