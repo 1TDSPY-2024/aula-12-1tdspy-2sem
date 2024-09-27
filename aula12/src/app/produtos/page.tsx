@@ -31,16 +31,16 @@ export default function Produtos() {
                             <td>{p.nome}</td>
                             <td>{p.preco}</td>
                             <td>{p.qtd}</td>
-                            <td><Link href={`produtos/produto/${p.id}`}>Editar</Link></td>
+                            <td><Link href={`/produtos/produto/${p.id}`}>Editar</Link></td>
                         </tr>
                     ))}
                 </tbody>
 
                 <tfoot>
                     <tr>
-                        <th>
-
-                        </th>
+                        <td colSpan={5}>
+                            Quantidade de registros: {produtos.length}
+                        </td>
                     </tr>
                 </tfoot>
             </table>
